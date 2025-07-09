@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(74, 74, 74);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+.profile-picture {
+  width: 70%;
+  border-radius: 35%;
+  margin: 40px 40px 5px 40px;
+}
+
+.profile-card { 
+  border-radius: 35%;
+  background-image: url(Assets/GalaxyBackground.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,1);
+  position: relative;
+}
+
+.profile-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.body-bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.5; 
+}
+
+.profile-card > *:not(.profile-bg-video) {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-name {
+  color: aliceblue;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.profile-bio {
+  color: aliceblue;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-links a {
+  color: aliceblue;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
+  border: 2px solid #fff;      
+  border-radius: 6px;          
+  padding: 6px 14px;           
+  transition: background 0.2s;
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,0.1); 
+}
